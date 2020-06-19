@@ -245,7 +245,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://88.142.248.142:8080/film/avis?title=1984",
+					"raw": "http://88.142.248.142:8080/film/avis?id=2521",
 					"protocol": "http",
 					"host": [
 						"88",
@@ -260,8 +260,8 @@
 					],
 					"query": [
 						{
-							"key": "title",
-							"value": "1984"
+							"key": "id",
+							"value": "2521"
 						}
 					]
 				}
