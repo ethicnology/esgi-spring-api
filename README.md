@@ -1,10 +1,10 @@
 # spring-sans-film
 
 ## Requirements
-Spring 4
-OpenJDK 14
-Intellij IDEA Ultimate
-Mysql
+Spring 4  
+OpenJDK 14  
+Intellij IDEA Ultimate  
+Mysql  
 
 ## Usage
 Import the Postman collection or use your browser  
