@@ -1,17 +1,15 @@
 package com.julescoco.allocine;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Film {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer film_id;
-
-    private String film_titre;
+    @Column(name = "film_id", columnDefinition="text")
+    private Integer filmid;
+    @Column(name = "film_titre", columnDefinition="text")
+    private String titre;
     private String film_url_affiche;
     private String film_datesortie;
     private String film_duree;
@@ -20,7 +18,7 @@ public class Film {
     private String film_synopsis;
     private Integer film_etoilespresse;
     private Integer film_etoilesspectateurs;
-    private String film_info;
+    private Integer film_info;
     private String film_genre;
     private String film_public;
     private String film_remake;
@@ -28,19 +26,19 @@ public class Film {
     private String film_distribuepar;
 
     public Integer getFilm_id() {
-        return film_id;
+        return filmid;
     }
 
-    public void setFilm_id(Integer film_id) {
-        this.film_id = film_id;
+    public void setFilm_id(Integer filmid) {
+        this.filmid = filmid;
     }
 
-    public String getFilm_titre() {
-        return film_titre;
+    public String getTitre() {
+        return titre;
     }
 
-    public void setFilm_titre(String film_titre) {
-        this.film_titre = film_titre;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
     public String getFilm_url_affiche() {
@@ -107,11 +105,11 @@ public class Film {
         this.film_etoilesspectateurs = film_etoilesspectateurs;
     }
 
-    public String getFilm_info() {
+    public Integer getFilm_info() {
         return film_info;
     }
 
-    public void setFilm_info(String film_info) {
+    public void setFilm_info(Integer film_info) {
         this.film_info = film_info;
     }
 

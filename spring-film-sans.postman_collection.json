@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7a300743-51b6-4d15-a8dc-e79a8c405d25",
+		"_postman_id": "1cd96b8d-8116-4735-893b-058483eac2f5",
 		"name": "spring-film-sans",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -64,7 +64,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://88.142.248.142:8080/films/add",
+					"raw": "http://88.142.248.142:8080/film/add?film_titre=test_film&film_url_affiche=http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg&film_datesortie=2020&film_duree=trop long&film_court=1&film_anneeproduction=2020&film_synopsis=test&film_etoilespresse=123&film_etoilesspectateurs=123&film_info=0&film_genre=ss&film_public=sss&film_remake=ssdfsf&film_titreoriginal=fdsfds&film_distribuepar=fdsfddsf",
 					"protocol": "http",
 					"host": [
 						"88",
@@ -74,8 +74,70 @@
 					],
 					"port": "8080",
 					"path": [
-						"films",
+						"film",
 						"add"
+					],
+					"query": [
+						{
+							"key": "film_titre",
+							"value": "test_film"
+						},
+						{
+							"key": "film_url_affiche",
+							"value": "http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg"
+						},
+						{
+							"key": "film_datesortie",
+							"value": "2020"
+						},
+						{
+							"key": "film_duree",
+							"value": "trop long"
+						},
+						{
+							"key": "film_court",
+							"value": "1"
+						},
+						{
+							"key": "film_anneeproduction",
+							"value": "2020"
+						},
+						{
+							"key": "film_synopsis",
+							"value": "test"
+						},
+						{
+							"key": "film_etoilespresse",
+							"value": "123"
+						},
+						{
+							"key": "film_etoilesspectateurs",
+							"value": "123"
+						},
+						{
+							"key": "film_info",
+							"value": "0"
+						},
+						{
+							"key": "film_genre",
+							"value": "ss"
+						},
+						{
+							"key": "film_public",
+							"value": "sss"
+						},
+						{
+							"key": "film_remake",
+							"value": "ssdfsf"
+						},
+						{
+							"key": "film_titreoriginal",
+							"value": "fdsfds"
+						},
+						{
+							"key": "film_distribuepar",
+							"value": "fdsfddsf"
+						}
 					]
 				}
 			},
