@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "7a300743-51b6-4d15-a8dc-e79a8c405d25",
+		"name": "spring-film-sans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/films",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://88.142.248.142:8080/films",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/films/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://88.142.248.142:8080/films",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/films",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"film_titre\": \"1984\",\n    \"film_url_affiche\": \"http://www.allocine.fr/film/fichefilm_gen_cfilm=1791.html\",\n    \"film_datesortie\": \"14 novembre 1984\",\n    \"film_duree\": \"1h 53min\",\n    \"film_court\": \"\",\n    \"film_anneeproduction\": \"14 novembre 1984\",\n    \"film_synopsis\": \"Manipulant et contrôlant les moindres détails de la vie de ses sujets, Big Brother est le chef spirituel d'Oceania, l'un des trois Etats dont la capitale est Londres. Le bureaucrate Winston Smith travaille dans l'un des départements. Mais un jour il tombe amoureux de Julia, ce qui est un crime. Tous les deux vont tenter de s'échapper, mais dans ce monde cauchemardesque divisé en trois, tout être qui se révolte est brisé.\",\n    \"film_etoilespresse\": \"4\",\n    \"film_etoilesspectateurs\": \"5\",\n    \"film_info\":\"0\",\n    \"film_genre\":\"Science fiction\",\n    \"film_public\": \"12 ans\",\n    \"film_remake\": \"\",\n    \"film_titreoriginal\": \"1984\",\n    \"film_distribuepar\": \"\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://88.142.248.142:8080/films/add",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"films",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/films",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"film_titre\": \"2020\",\n    \"film_url_affiche\": \"http://www.allocine.fr/film/fichefilm_gen_cfilm=1791.html\",\n    \"film_datesortie\": \"14 novembre 1984\",\n    \"film_duree\": \"1h 53min\",\n    \"film_court\": \"\",\n    \"film_anneeproduction\": \"14 novembre 1984\",\n    \"film_synopsis\": \"Manipulant et contrôlant les moindres détails de la vie de ses sujets, Big Brother est le chef spirituel d'Oceania, l'un des trois Etats dont la capitale est Londres. Le bureaucrate Winston Smith travaille dans l'un des départements. Mais un jour il tombe amoureux de Julia, ce qui est un crime. Tous les deux vont tenter de s'échapper, mais dans ce monde cauchemardesque divisé en trois, tout être qui se révolte est brisé.\",\n    \"film_etoilespresse\": \"4\",\n    \"film_etoilesspectateurs\": \"5\",\n    \"film_info\":\"0\",\n    \"film_genre\":\"Science fiction\",\n    \"film_public\": \"12 ans\",\n    \"film_remake\": \"\",\n    \"film_titreoriginal\": \"1984\",\n    \"film_distribuepar\": \"\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://88.142.248.142:8080/films",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/films/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://88.142.248.142:8080/films",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
