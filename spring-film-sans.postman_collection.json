@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1cd96b8d-8116-4735-893b-058483eac2f5",
+		"_postman_id": "2cbcaf31-7715-4c55-b136-e383cf8f4530",
 		"name": "spring-film-sans",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -28,12 +28,12 @@
 			"response": []
 		},
 		{
-			"name": "/films/:id",
+			"name": "/films/delete",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://88.142.248.142:8080/films",
+					"raw": "http://88.142.248.142:8080/film/delete?film_id=3",
 					"protocol": "http",
 					"host": [
 						"88",
@@ -43,28 +43,26 @@
 					],
 					"port": "8080",
 					"path": [
-						"films"
+						"film",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "film_id",
+							"value": "3"
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "/films",
+			"name": "/film/add",
 			"request": {
 				"method": "POST",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"film_titre\": \"1984\",\n    \"film_url_affiche\": \"http://www.allocine.fr/film/fichefilm_gen_cfilm=1791.html\",\n    \"film_datesortie\": \"14 novembre 1984\",\n    \"film_duree\": \"1h 53min\",\n    \"film_court\": \"\",\n    \"film_anneeproduction\": \"14 novembre 1984\",\n    \"film_synopsis\": \"Manipulant et contrôlant les moindres détails de la vie de ses sujets, Big Brother est le chef spirituel d'Oceania, l'un des trois Etats dont la capitale est Londres. Le bureaucrate Winston Smith travaille dans l'un des départements. Mais un jour il tombe amoureux de Julia, ce qui est un crime. Tous les deux vont tenter de s'échapper, mais dans ce monde cauchemardesque divisé en trois, tout être qui se révolte est brisé.\",\n    \"film_etoilespresse\": \"4\",\n    \"film_etoilesspectateurs\": \"5\",\n    \"film_info\":\"0\",\n    \"film_genre\":\"Science fiction\",\n    \"film_public\": \"12 ans\",\n    \"film_remake\": \"\",\n    \"film_titreoriginal\": \"1984\",\n    \"film_distribuepar\": \"\"\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://88.142.248.142:8080/film/add?film_titre=test_film&film_url_affiche=http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg&film_datesortie=2020&film_duree=trop long&film_court=1&film_anneeproduction=2020&film_synopsis=test&film_etoilespresse=123&film_etoilesspectateurs=123&film_info=0&film_genre=ss&film_public=sss&film_remake=ssdfsf&film_titreoriginal=fdsfds&film_distribuepar=fdsfddsf",
+					"raw": "http://88.142.248.142:8080/film/add?film_titre=1984&film_url_affiche=http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg&film_datesortie=2020&film_duree=1h 51min&film_court=0&film_anneeproduction=1300&film_synopsis=Big brother is watching you&film_etoilespresse=4&film_etoilesspectateurs=5&film_info=0&film_genre=Science fiction&film_public=12 ans et plus&film_remake=nop&film_titreoriginal=Nineteen heighty four&film_distribuepar=google",
 					"protocol": "http",
 					"host": [
 						"88",
@@ -78,6 +76,104 @@
 						"add"
 					],
 					"query": [
+						{
+							"key": "film_titre",
+							"value": "1984"
+						},
+						{
+							"key": "film_url_affiche",
+							"value": "http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg"
+						},
+						{
+							"key": "film_datesortie",
+							"value": "2020"
+						},
+						{
+							"key": "film_duree",
+							"value": "1h 51min"
+						},
+						{
+							"key": "film_court",
+							"value": "0"
+						},
+						{
+							"key": "film_anneeproduction",
+							"value": "1300"
+						},
+						{
+							"key": "film_synopsis",
+							"value": "Big brother is watching you"
+						},
+						{
+							"key": "film_etoilespresse",
+							"value": "4"
+						},
+						{
+							"key": "film_etoilesspectateurs",
+							"value": "5"
+						},
+						{
+							"key": "film_info",
+							"value": "0"
+						},
+						{
+							"key": "film_genre",
+							"value": "Science fiction"
+						},
+						{
+							"key": "film_public",
+							"value": "12 ans et plus"
+						},
+						{
+							"key": "film_remake",
+							"value": "nop"
+						},
+						{
+							"key": "film_titreoriginal",
+							"value": "Nineteen heighty four"
+						},
+						{
+							"key": "film_distribuepar",
+							"value": "google"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/film/edit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"film_titre\": \"1984\",\n    \"film_url_affiche\": \"http://www.allocine.fr/film/fichefilm_gen_cfilm=1791.html\",\n    \"film_datesortie\": \"14 novembre 1984\",\n    \"film_duree\": \"1h 53min\",\n    \"film_court\": \"\",\n    \"film_anneeproduction\": \"14 novembre 1984\",\n    \"film_synopsis\": \"Manipulant et contrôlant les moindres détails de la vie de ses sujets, Big Brother est le chef spirituel d'Oceania, l'un des trois Etats dont la capitale est Londres. Le bureaucrate Winston Smith travaille dans l'un des départements. Mais un jour il tombe amoureux de Julia, ce qui est un crime. Tous les deux vont tenter de s'échapper, mais dans ce monde cauchemardesque divisé en trois, tout être qui se révolte est brisé.\",\n    \"film_etoilespresse\": \"4\",\n    \"film_etoilesspectateurs\": \"5\",\n    \"film_info\":\"0\",\n    \"film_genre\":\"Science fiction\",\n    \"film_public\": \"12 ans\",\n    \"film_remake\": \"\",\n    \"film_titreoriginal\": \"1984\",\n    \"film_distribuepar\": \"\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://88.142.248.142:8080/film/edit?film_id=1&film_titre=test_film&film_url_affiche=http://a69.g.akamai.net/n/69/10688/v1/img5.allocine.fr/acmedia/medias/nmedia/18/62/87/33/18656572.jpg&film_datesortie=2020&film_duree=trop long&film_court=0&film_anneeproduction=2020&film_synopsis=test&film_etoilespresse=123&film_etoilesspectateurs=123&film_info=0&film_genre=ss&film_public=sss&film_remake=ssdfsf&film_titreoriginal=fdsfds&film_distribuepar=fdsfddsf",
+					"protocol": "http",
+					"host": [
+						"88",
+						"142",
+						"248",
+						"142"
+					],
+					"port": "8080",
+					"path": [
+						"film",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "film_id",
+							"value": "1"
+						},
 						{
 							"key": "film_titre",
 							"value": "test_film"
@@ -96,7 +192,7 @@
 						},
 						{
 							"key": "film_court",
-							"value": "1"
+							"value": "0"
 						},
 						{
 							"key": "film_anneeproduction",
@@ -144,43 +240,12 @@
 			"response": []
 		},
 		{
-			"name": "/films",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"film_titre\": \"2020\",\n    \"film_url_affiche\": \"http://www.allocine.fr/film/fichefilm_gen_cfilm=1791.html\",\n    \"film_datesortie\": \"14 novembre 1984\",\n    \"film_duree\": \"1h 53min\",\n    \"film_court\": \"\",\n    \"film_anneeproduction\": \"14 novembre 1984\",\n    \"film_synopsis\": \"Manipulant et contrôlant les moindres détails de la vie de ses sujets, Big Brother est le chef spirituel d'Oceania, l'un des trois Etats dont la capitale est Londres. Le bureaucrate Winston Smith travaille dans l'un des départements. Mais un jour il tombe amoureux de Julia, ce qui est un crime. Tous les deux vont tenter de s'échapper, mais dans ce monde cauchemardesque divisé en trois, tout être qui se révolte est brisé.\",\n    \"film_etoilespresse\": \"4\",\n    \"film_etoilesspectateurs\": \"5\",\n    \"film_info\":\"0\",\n    \"film_genre\":\"Science fiction\",\n    \"film_public\": \"12 ans\",\n    \"film_remake\": \"\",\n    \"film_titreoriginal\": \"1984\",\n    \"film_distribuepar\": \"\"\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://88.142.248.142:8080/films",
-					"protocol": "http",
-					"host": [
-						"88",
-						"142",
-						"248",
-						"142"
-					],
-					"port": "8080",
-					"path": [
-						"films"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "/films/:id",
+			"name": "/films/avis",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://88.142.248.142:8080/films",
+					"raw": "http://88.142.248.142:8080/film/avis?title=1984",
 					"protocol": "http",
 					"host": [
 						"88",
@@ -190,7 +255,14 @@
 					],
 					"port": "8080",
 					"path": [
-						"films"
+						"film",
+						"avis"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1984"
+						}
 					]
 				}
 			},
