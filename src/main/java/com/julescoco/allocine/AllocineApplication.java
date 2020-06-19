@@ -7,8 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @SpringBootApplication
 @RestController
 public class AllocineApplication {
@@ -25,13 +23,13 @@ public class AllocineApplication {
         return filmRepository.findAll();
     }
 
-    @PostMapping("/film/avis")
-    public @ResponseBody String getAvisFrom(@RequestParam String title) {
-        Film search = filmRepository.findByTitre(title);
+    @GetMapping("/film/avis")
+    public @ResponseBody String getAvisFrom(@RequestParam Integer id) {
+        Film search = filmRepository.findByFilmid(id);
         return "{ \"avis_spec\":" + search.getFilm_etoilesspectateurs()+ ", \"avis_press\":" + search.getFilm_etoilespresse()+ "}";
     }
 
-    @PostMapping("/film/delete")
+    @DeleteMapping("/film/delete")
     public @ResponseBody String deleteFilm(@RequestParam Integer film_id) {
         Film film = filmRepository.findByFilmid(film_id);
         String film_title = filmRepository.findByFilmid(film_id).getTitre();
@@ -39,7 +37,7 @@ public class AllocineApplication {
         return film_title + " deleted";
     }
 
-    @PostMapping("/film/edit")
+    @PutMapping("/film/edit")
     public @ResponseBody String editFilm(@RequestParam Integer film_id,
                                         @RequestParam String film_titre,
                                         @RequestParam String film_url_affiche,
@@ -109,6 +107,6 @@ public class AllocineApplication {
         film.setFilm_titreoriginal(film_titreoriginal);
         film.setFilm_distribuepar(film_distribuepar);
         filmRepository.save(film);
-        return film_titre + " added";
+        return film.getFilm_id() + " added";
     }
 }

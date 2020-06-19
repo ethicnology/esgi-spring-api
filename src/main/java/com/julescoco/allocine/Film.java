@@ -6,9 +6,9 @@ import javax.persistence.*;
 public class Film {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name = "film_id", columnDefinition="text")
+    @Column(name = "film_id")
     private Integer filmid;
-    @Column(name = "film_titre", columnDefinition="text")
+    @Column(name = "film_titre")
     private String titre;
     private String film_url_affiche;
     private String film_datesortie;
